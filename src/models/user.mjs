@@ -5,5 +5,3 @@ export const User = sequelize.define('users', {
     email: DataTypes.STRING,
     password: DataTypes.STRING
 })
-
-User.sync()

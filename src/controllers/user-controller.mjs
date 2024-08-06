@@ -18,6 +18,8 @@ UserController.login = async (req, res) => {
     const user = await User.findOne({
         where: { email: req.body.email }
     })
+
+    console.log(`Usuário: ${user}`)
     
     if (user) {
         if (await bcrypt.compare(req.body.password, user.password)) {

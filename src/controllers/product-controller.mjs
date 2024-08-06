@@ -2,14 +2,15 @@ import { Product } from '../models/product.mjs'
 
 export const ProductController = {
     "new": async (req, res) => {
-        const { name, price, description, stockQuantity, slug } = req.body
+        const { name, price, description, stockQuantity, slug, CategoryId } = req.body
 
         const product = await Product.create({
             name,
             price,
             description,
             stockQuantity,
-            slug
+            slug,
+            CategoryId
         })
 
         res.status(201).send(product)

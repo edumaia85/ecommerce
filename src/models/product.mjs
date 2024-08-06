@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize'
 
 import { sequelize } from '../database/connection.mjs'
-import Category from './category.mjs'
+import { Category } from './category.mjs'
 
 export const Product = sequelize.define('products', {
     name: DataTypes.STRING,
@@ -15,5 +15,3 @@ export const Product = sequelize.define('products', {
 })
 
 Product.belongsTo(Category)
-
-Product.sync()

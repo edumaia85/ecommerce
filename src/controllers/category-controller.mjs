@@ -1,4 +1,4 @@
-import Category from '../models/category.mjs'
+import { Category } from '../models/category.mjs'
 
 export const CategoryController = Object.create(Object.prototype)
 
