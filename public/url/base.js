@@ -1,4 +1,4 @@
-const urlBaseAPI = 'http://localhost:3333';
-const urlBaseFront = 'http://localhost:3333';
+const urlBaseAPI = 'https://ecommerce-ddxr.onrender.com';
+const urlBaseFront = 'https://ecommerce-ddxr.onrender.com';
 
 export { urlBaseAPI, urlBaseFront };
