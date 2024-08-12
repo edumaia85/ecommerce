@@ -72,7 +72,7 @@ function enviaDadosParaCadastro() {
         })
         .then((json) => {
             //console.log(json);
-            alert('Categoria ' + json.title + ' cadastrada!');
+            alert('Categoria ' + json.name + ' cadastrada!');
             carregaDados();
         })
     alternaModal();
@@ -92,7 +92,7 @@ function enviaDadosParaDelecao(id) {
         })
         .then((json) => {
             //console.log(json);
-            alert('Categoria ' + json.title + ' deletada!');
+            alert('Categoria ' + json.name + ' deletada!');
             carregaDados();
         })
     alternaModal();
@@ -118,7 +118,7 @@ function enviaDadosParaEdicao() {
         })
         .then((json) => {
             //console.log(json);
-            alert('Categoria ' + json.title + ' alterada!');
+            alert('Categoria ' + json.name + ' alterada!');
             carregaDados();
         })
     alternaModal();

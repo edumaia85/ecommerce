@@ -78,7 +78,7 @@ function enviaDadosParaCadastro() {
         })
         .then((json) => {
             //console.log(json);
-            alert('Produto ' + json.title + ' cadastrado!');
+            alert('Produto ' + json.name + ' cadastrado!');
             carregaDados();
         })
     alternaModal();
@@ -98,7 +98,7 @@ function enviaDadosParaDelecao(id) {
         })
         .then((json) => {
             //console.log(json);
-            alert('Produto ' + json.title + ' deletado!');
+            alert('Produto ' + json.name + ' deletado!');
             carregaDados();
         })
     alternaModal();
@@ -127,7 +127,7 @@ function enviaDadosParaEdicao() {
         })
         .then((json) => {
             //console.log(json);
-            alert('Produto ' + json.title + ' alterado!');
+            alert('Produto ' + json.name + ' alterado!');
             carregaDados();
         })
     alternaModal();
