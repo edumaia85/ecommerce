@@ -11,8 +11,8 @@ productRoutes.use((req, res, next) => {
     }
 })
 
-productRoutes.get('/product', ProductController.all)
-productRoutes.get('/product/:id', ProductController.one)
-productRoutes.post('/product', ProductController.new)
-productRoutes.put('/product', ProductController.edit)
-productRoutes.delete('/product', ProductController.remove)
+productRoutes.get('/', ProductController.all)
+productRoutes.get('/:id', ProductController.one)
+productRoutes.post('/', ProductController.new)
+productRoutes.put('/', ProductController.edit)
+productRoutes.delete('/', ProductController.remove)

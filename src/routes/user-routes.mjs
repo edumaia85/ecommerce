@@ -1,11 +1,12 @@
 import { Router } from "express";
 import { UserController } from '../controllers/user-controller.mjs'
 
-const userRoutes = Router()
+export const userRoutes = Router()
 
-userRoutes.post('/user', UserController.new);
-userRoutes.post('/user/login', UserController.login);
-userRoutes.get('/user/logged', UserController.logged);
-userRoutes.get('/user/logout', UserController.logout);
+userRoutes.post('/', UserController.new);
+userRoutes.get('/existuser', UserController.existUser);
+userRoutes.post('/login', UserController.login);
+userRoutes.get('/logged', UserController.logged);
+userRoutes.get('/logout', UserController.logout);
 
 export default userRoutes

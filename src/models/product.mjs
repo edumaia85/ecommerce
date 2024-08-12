@@ -14,4 +14,4 @@ export const Product = sequelize.define('products', {
     slug: DataTypes.STRING,
 })
 
-Product.belongsTo(Category)
+// Product.belongsTo(Category)

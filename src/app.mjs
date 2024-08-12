@@ -4,7 +4,7 @@ import session from 'express-session'
 
 import { categoryRoutes } from './routes/category-routes.mjs'
 import { productRoutes } from './routes/product-routes.mjs'
-import userRoutes from './routes/user-routes.mjs'
+import { userRoutes } from './routes/user-routes.mjs'
 
 import { sequelize } from './database/connection.mjs'
 
@@ -28,9 +28,9 @@ app.use(express.json())
 
 app.use(express.static('public'))
 
-app.use(userRoutes)
-app.use(categoryRoutes)
-app.use(productRoutes)
+app.use('/categories', categoryRoutes)
+app.use('/product', productRoutes)
+app.use('/user', userRoutes)
 
 app.listen(3333, () => {
     console.log('HTTP server running!')

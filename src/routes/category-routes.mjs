@@ -11,9 +11,8 @@ categoryRoutes.use((req, res, next) => {
     }
 })
 
-
-categoryRoutes.get('/categories', CategoryController.all);
-categoryRoutes.get('/categories/:id', CategoryController.one);
-categoryRoutes.post('/categories', CategoryController.new);
-categoryRoutes.put('/categories', CategoryController.edit);
-categoryRoutes.delete('/categories', CategoryController.remove);
+categoryRoutes.get('/', CategoryController.all);
+categoryRoutes.get('/:id', CategoryController.one);
+categoryRoutes.post('/', CategoryController.new);
+categoryRoutes.put('/', CategoryController.edit);
+categoryRoutes.delete('/', CategoryController.remove);

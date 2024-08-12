@@ -2,18 +2,21 @@ import { urlBaseAPI, urlBaseFront } from "../url/base.js";
 
 function realizaLogin() {
     const data = new FormData(document.forms[0]);
+
     const opcoes = {
         method: 'post',
         credentials: 'include',
         body: new URLSearchParams(data)
     };
+
     fetch(`${urlBaseAPI}/user/login`, opcoes)
         .then((res) => {
             return res.json();
         })
         .then((json) => {
+            console.log(json)
             if (json.logged) {
-                //alert('Autenticado.');
+                alert('Autenticado.');
                 window.location = `${urlBaseFront}/index.html`;
             } else {
                 alert('Tente novamente.');
